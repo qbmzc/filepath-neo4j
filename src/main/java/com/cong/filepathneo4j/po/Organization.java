@@ -1,7 +1,6 @@
-package com.cong.filepathneo4j.pojo;
+package com.cong.filepathneo4j.po;
 
 import lombok.Data;
-import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
@@ -24,7 +23,7 @@ public class Organization {
 
     @Relationship(type = "group",direction = Relationship.Direction.OUTGOING)
     private List<Group> groups =new ArrayList<>();
-    private  void addGroup(Group group){
+    public   void addGroup(Group group){
         this.groups.add(group);
     }
 }

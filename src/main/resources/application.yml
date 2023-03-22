@@ -5,9 +5,9 @@ spring:
   application:
     name: filepath
 
-  data:
-    neo4j:
-      database:
-        uri: http://10.104.1.206:7474
-        username: neo4j
+
+  neo4j:
+      uri: bolt://10.104.1.206:7687
+      authentication:
+        username:  neo4j
         password: cong@1021
